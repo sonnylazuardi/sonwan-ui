@@ -4,6 +4,7 @@ import CardListPage from "./cardlist";
 import GettingStarted from "./gettingstarted";
 import Swipe from "./swipe";
 import Switch from "./switch";
+import Switcher from "@/components/Switch";
 import cn from "classnames";
 import { Link } from "gatsby";
 
@@ -46,6 +47,18 @@ const DemoIndex = () => {
                 </a>
               );
             })}
+            <div className="p-4 px-8">
+              <Switcher
+                name="sidebar"
+                onChange={(darkMode) => {
+                  if (darkMode) {
+                    document.querySelector("html").classList.add("dark");
+                  } else {
+                    document.querySelector("html").classList.remove("dark");
+                  }
+                }}
+              />
+            </div>
           </div>
         </div>
         <div className="col-span-full sm:col-span-10">

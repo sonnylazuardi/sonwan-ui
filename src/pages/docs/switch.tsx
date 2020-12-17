@@ -31,7 +31,7 @@ const SwitchPage = () => {
         <div className="col-span-full sm:col-span-1">
           <div style={{ height: 200, overflow: "auto" }}>
             <Editor
-              className="block w-full text-sm font-mono bg-white rounded-xl"
+              className="block w-full text-sm font-mono bg-white dark:bg-dark-500 rounded-xl"
               value={code}
               onValueChange={(code) => setCode(code)}
               highlight={(code) => highlight(code, languages.js)}
