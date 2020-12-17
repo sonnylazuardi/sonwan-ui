@@ -42,8 +42,8 @@ const IndexPage = () => {
             <Card>
               <div className="opacity-50 my-1">Recent Contacts</div>
               <CardItem
-                className="py-4"
                 title="Samantha"
+                className="py-4"
                 subtitle="Bank - 0987 3422 8756"
                 avatar={
                   <img
@@ -53,8 +53,8 @@ const IndexPage = () => {
                 }
               />
               <CardItem
-                className="py-4"
                 title="Karen William"
+                className="py-4"
                 subtitle="Bank - 0987 3422 8756"
                 avatar={
                   <img
@@ -64,8 +64,8 @@ const IndexPage = () => {
                 }
               />
               <CardItem
-                className="py-4"
                 title="Angela Smith"
+                className="py-4"
                 subtitle="Bank - 0987 3422 8756"
                 avatar={
                   <img
