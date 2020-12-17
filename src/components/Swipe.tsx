@@ -1,9 +1,12 @@
 import * as React from "react";
 import { motion, useAnimation } from "framer-motion";
-import Arrow from "../icons/Arrow";
+import Arrow from "@/icons/Arrow";
 
-// markup
-const Swipe = (props) => {
+interface Swipe {
+  onSwipeFinish?: Function;
+}
+
+const Swipe = (props: Swipe) => {
   const controls = useAnimation();
   const controlBg = useAnimation();
   return (
@@ -29,7 +32,10 @@ const Swipe = (props) => {
           if (value < 44) value = 44;
           controlBg.set({ width: value });
         }}
-        onDragEnd={() => {
+        onDragEnd={(e, info) => {
+          if (info.offset.x > 240) {
+            props.onSwipeFinish && props.onSwipeFinish();
+          }
           controls.start({ x: 0 });
           controlBg.start({ width: 44 });
         }}

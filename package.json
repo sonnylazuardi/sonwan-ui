@@ -26,5 +26,8 @@
     "react-dom": "^16.13.1",
     "tailwind-rn": "^2.0.1",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "tsconfig-paths-webpack-plugin": "^3.3.0"
   }
 }

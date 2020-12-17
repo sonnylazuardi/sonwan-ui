@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import Checklist from "../icons/Checklist";
+import Checklist from "@/icons/Checklist";
 
 const CardCheck = (props) => {
   const [checked, setChecked] = React.useState(false);
