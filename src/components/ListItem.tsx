@@ -7,7 +7,7 @@ export interface ListItem {
 
 const ListItem = (props: ListItem) => {
   return (
-    <div className="flex flex-row py-4 text-sm">
+    <div className="flex flex-row py-4 text-sm text-black dark:text-white">
       <div className="font-semibold mb-1">{props.title}</div>
       {props.action ? (
         <>

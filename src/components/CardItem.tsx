@@ -16,7 +16,7 @@ const CardItem = (props: CardItem) => {
           {props.avatar}
         </div>
       ) : null}
-      <div className="flex flex-col">
+      <div className="flex flex-col text-black dark:text-white">
         <div className="font-semibold mb-1">{props.title}</div>
         <div className="font-normal text-xs opacity-50">{props.subtitle}</div>
       </div>
