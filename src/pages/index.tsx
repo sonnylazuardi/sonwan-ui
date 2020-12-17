@@ -28,7 +28,7 @@ const IndexPage = () => {
         </div>
         <Link
           to="docs"
-          className="px-8 py-4 bg-purple rounded-xl self-center text-sm font-semibold text-white"
+          className="px-8 py-4 bg-purple rounded-xl self-center text-sm font-semibold text-white mb-4"
         >
           Getting Started
         </Link>
