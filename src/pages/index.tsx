@@ -8,23 +8,31 @@ import Card from "@/components/Card";
 import CardItem from "@/components/CardItem";
 import Input from "@/components/Input";
 import ListItem from "@/components/ListItem";
+import { Link } from "gatsby";
 
 // markup
 const IndexPage = () => {
   return (
     <main
-      className="flex flex-col items-center bg-white dark:bg-dark-500 text-black dark:text-white pt-32 pb-12"
+      className="flex flex-col items-center bg-white dark:bg-dark-500 text-black dark:text-white pt-24 pb-12"
       style={{ minHeight: "100vh" }}
     >
       <title>SonWan UI</title>
-      <div style={{ width: 768, maxWidth: "100%" }}>
-        <div className="text-5xl font-extrabold text-center tracking-tighter">
+      <div style={{ width: 768, maxWidth: "100%" }} className="flex flex-col">
+        <div className="text-5xl font-extrabold text-center tracking-tighter mb-1">
           SonWan UI
         </div>
-        <div className="text-sm font-light text-center px-8 tracking-wide">
+        <div className="text-sm font-light text-center px-8 tracking-wide mb-4">
           <p>SonWan UI is a modular, cross-platform component library</p>
           <p>to build your next React & React Native Application.</p>
         </div>
+        <Link
+          to="docs"
+          className="px-8 py-4 bg-purple rounded-xl self-center text-sm font-semibold text-white"
+        >
+          Getting Started
+        </Link>
+
         <div className="grid grid-cols-2 gap-5 bg-light-100 dark:bg-dark-900 p-8 m-8 rounded-2xl">
           <div className="col-span-full sm:col-span-1">
             <Card>
@@ -130,7 +138,10 @@ const IndexPage = () => {
                 subtitle="**** - **** - 9876"
               />
             </CardCheck>
-            <Swipe onSwipeFinish={() => alert("Swipe Triggered")} />
+            <Swipe
+              title="SWIPE TO PAY"
+              onSwipeFinish={() => alert("Swipe Triggered")}
+            />
             <div className="py-4 text-sm opacity-50 w-full text-center">
               More Component Coming Soon...
             </div>

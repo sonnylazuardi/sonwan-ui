@@ -4,6 +4,7 @@ import Arrow from "@/icons/Arrow";
 
 interface Swipe {
   onSwipeFinish?: Function;
+  title: string;
 }
 
 const Swipe = (props: Swipe) => {
@@ -12,7 +13,7 @@ const Swipe = (props: Swipe) => {
   return (
     <div className="relative mb-4">
       <div className="p-5 rounded-full bg-purple text-white flex items-center justify-center tracking-widest text-sm font-semibold ">
-        SWIPE TO PAY
+        {props.title}
       </div>
       <motion.div
         className="rounded-full h-11 bg-white absolute top-2 left-2 flex items-center justify-center"
