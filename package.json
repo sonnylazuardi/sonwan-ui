@@ -1,0 +1,30 @@
+{
+  "name": "sonwan-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SonWan UI: a modular, cross-platform component library to build your next React & React Native Application.",
+  "author": "Sonny Lazuardi Hermawan",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "classnames": "^2.2.6",
+    "framer-motion": "^3.0.0",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-postcss": "^3.3.0",
+    "postcss": "^8.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwind-rn": "^2.0.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
