@@ -8,7 +8,10 @@ const CardPage = () => {
         <div className="text-2xl font-semibold mb-4">Installation</div>
         <div>
           Inside your React project directory,{" "}
-          <a href="https://tailwindcss.com/docs/guides/create-react-app">
+          <a
+            href="https://tailwindcss.com/docs/guides/create-react-app"
+            className="font-bold"
+          >
             install tailwindcss
           </a>
           , then install components by running the following

@@ -1,54 +1,38 @@
 import * as React from "react";
-
-import Card from "@/components/Card";
-import CardItem from "@/components/CardItem";
 import Content from "@/components/docs/Content";
+
 import JsxParser from "react-jsx-parser";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
+import CardCheck from "@/components/CardCheck";
+import CardItem from "@/components/CardItem";
+import Folder from "@/icons/Folder";
 
-const DEFAULT_CODE = `<Card>
+const DEFAULT_CODE = `<CardCheck>
   <CardItem
-    title="Bambang Eko"
-    subtitle="0821 - 7654 - 3210"
     avatar={
-      <img
-        src="https://randomuser.me/api/portraits/men/19.jpg"
-        className="rounded-full"
-      />
+      <div className="w-10 h-10 bg-yellow rounded-full relative flex justify-center items-center">
+        <Folder />
+      </div>
     }
+    title="Business Account"
+    subtitle="**** - **** - 9876"
   />
-</Card>
-<div className="dark">
-  <Card>
-    <CardItem
-      title="Putri Saputri"
-      subtitle="0821 - 7654 - 3210"
-      avatar={
-        <img
-          src="https://randomuser.me/api/portraits/women/1.jpg"
-          className="rounded-full"
-        />
-      }
-    />
-  </Card>
-</div>      
-`;
+</CardCheck>`;
 
-const CardPage = () => {
+const CardCheckPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
-    <Content title="Card" id="card">
+    <Content title="Card Check" id="cardcheck">
       <div className="pb-10 max-w-4xl">
-        Card Component is a card wrapper component that automatically give you
-        card layout and color. Inside card, you can add CardItem component that
-        may contains avatar, title and subtitle.
+        Card Check is a toggle component inside card with check mark on the
+        right side of the card.
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-full sm:col-span-1">
-          <div style={{ height: 300, overflow: "auto" }}>
+          <div style={{ height: 200, overflow: "auto" }}>
             <Editor
               className="block w-full text-sm font-mono bg-white dark:bg-dark-500 rounded-xl"
               value={code}
@@ -65,7 +49,7 @@ const CardPage = () => {
           <JsxParser
             bindings={{}}
             //@ts-ignore
-            components={{ Card, CardItem }}
+            components={{ CardCheck, CardItem, Folder }}
             jsx={code}
           />
         </div>
@@ -74,4 +58,4 @@ const CardPage = () => {
   );
 };
 
-export default CardPage;
+export default CardCheckPage;

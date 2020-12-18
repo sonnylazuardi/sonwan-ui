@@ -115,7 +115,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="col-span-full sm:col-span-1">
-            <Input />
+            <Input placeholder="Search..." />
             <CardCheck>
               <CardItem
                 avatar={

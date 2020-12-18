@@ -1,10 +1,15 @@
 import * as React from "react";
+
 import CardPage from "./card";
 import CardListPage from "./cardlist";
 import GettingStarted from "./gettingstarted";
-import Swipe from "./swipe";
-import Switch from "./switch";
-import Switcher from "@/components/Switch";
+import SwipePage from "./swipe";
+import SwitchPage from "./switch";
+import InputPage from "./input";
+import CardCheckPage from "./cardcheck";
+import IconsPage from "./icons";
+
+import Switch from "@/components/Switch";
 import cn from "classnames";
 import { Link } from "gatsby";
 
@@ -14,18 +19,23 @@ const menu = [
   { label: "Card List", id: "cardlist" },
   { label: "Switch", id: "switch" },
   { label: "Swipe", id: "swipe" },
+  { label: "Input", id: "input" },
+  { label: "Card Check", id: "cardcheck" },
+  { label: "Icons", id: "icons" },
 ];
+
+require("smoothscroll-polyfill").polyfill();
 
 const DemoIndex = () => {
   const [active, setActive] = React.useState("");
   return (
     <>
       <div className="grid grid-cols-12">
-        <div className="col-span-full sm:col-span-2 relative">
-          <div className="sticky top-0 left-0 bottom-0 right-0 sm:h-screen flex flex-col">
+        <div className="col-span-full md:col-span-3 lg:col-span-2 relative">
+          <div className="sticky top-0 left-0 bottom-0 right-0 sm:h-screen flex flex-col text-black dark:text-white bg-light-100 dark:bg-dark-900 overflow-auto">
             <Link
               to="/"
-              className="text-3xl font-extrabold text-center tracking-tighter my-10"
+              className="text-2xl font-extrabold text-center tracking-tighter my-10"
             >
               SonWan UI
             </Link>
@@ -33,13 +43,27 @@ const DemoIndex = () => {
               return (
                 <a
                   key={i}
-                  onClick={() => setActive(item.id)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    let offset = () => 0;
+
+                    const id = e.currentTarget.getAttribute("href").slice(1);
+                    const $anchor = document.getElementById(id);
+                    const offsetTop =
+                      $anchor.getBoundingClientRect().top + window.pageYOffset;
+                    window.scroll({
+                      top: offsetTop - offset(),
+                      behavior: "smooth",
+                    });
+                    setActive(item.id);
+                  }}
                   href={`#${item.id}`}
                   className={cn(
                     "p-4 m-4 mt-0 rounded-xl text-sm font-semibold",
                     {
-                      "bg-light-100 text-black": item.id === active,
-                      "text-gray-400": item.id !== active,
+                      "bg-white dark:bg-dark-500 text-black dark:text-white":
+                        item.id === active,
+                      "text-gray-500 dark:text-light-100": item.id !== active,
                     }
                   )}
                 >
@@ -47,8 +71,8 @@ const DemoIndex = () => {
                 </a>
               );
             })}
-            <div className="p-4 px-8">
-              <Switcher
+            <div className="p-4 px-8 mb-4">
+              <Switch
                 name="sidebar"
                 onChange={(darkMode) => {
                   if (darkMode) {
@@ -61,12 +85,15 @@ const DemoIndex = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-full sm:col-span-10">
+        <div className="col-span-full md:col-span-9 lg:col-span-10">
           <GettingStarted />
           <CardPage />
           <CardListPage />
-          <Switch />
-          <Swipe />
+          <SwitchPage />
+          <SwipePage />
+          <InputPage />
+          <CardCheckPage />
+          <IconsPage />
         </div>
       </div>
     </>

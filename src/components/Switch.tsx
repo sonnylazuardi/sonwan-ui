@@ -14,7 +14,7 @@ const Switch = (props) => {
         className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-transparent-100 appearance-none cursor-pointer"
       />
       <label
-        for={props.name}
+        htmlFor={props.name}
         className="toggle-label block overflow-hidden h-6 rounded-full bg-transparent-100 cursor-pointer"
       ></label>
     </div>
