@@ -12,6 +12,7 @@ import IconsPage from "./icons";
 import Switch from "@/components/Switch";
 import cn from "classnames";
 import { Link } from "gatsby";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const menu = [
   { label: "Getting Started", id: "gettingstarted" },
@@ -23,8 +24,6 @@ const menu = [
   { label: "Card Check", id: "cardcheck" },
   { label: "Icons", id: "icons" },
 ];
-
-require("smoothscroll-polyfill").polyfill();
 
 const DemoIndex = () => {
   const [active, setActive] = React.useState("");
@@ -45,16 +44,7 @@ const DemoIndex = () => {
                   key={i}
                   onClick={(e) => {
                     e.preventDefault();
-                    let offset = () => 0;
-
-                    const id = e.currentTarget.getAttribute("href").slice(1);
-                    const $anchor = document.getElementById(id);
-                    const offsetTop =
-                      $anchor.getBoundingClientRect().top + window.pageYOffset;
-                    window.scroll({
-                      top: offsetTop - offset(),
-                      behavior: "smooth",
-                    });
+                    scrollTo(e.currentTarget.getAttribute("href"));
                     setActive(item.id);
                   }}
                   href={`#${item.id}`}
