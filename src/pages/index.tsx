@@ -19,12 +19,14 @@ const IndexPage = () => {
     >
       <title>SonWan UI</title>
       <div style={{ width: 768, maxWidth: "100%" }} className="flex flex-col">
-        <div className="text-5xl font-extrabold text-center tracking-tighter mb-1">
+        <div className="text-5xl font-extrabold text-center tracking-tighter mb-2">
           SonWan UI
         </div>
-        <div className="text-sm font-light text-center px-8 tracking-wide mb-4">
-          <p>SonWan UI is a modular, cross-platform component library</p>
-          <p>to build your next React & React Native Application.</p>
+        <div className="text-sm font-light text-center px-8 tracking-wide mb-6 max-w-lg self-center">
+          <p>
+            SonWan UI is a modular, component library based on figma design to
+            build your next React Web Application.
+          </p>
         </div>
         <div className="self-center flex flex-row space-x-4">
           <Link
