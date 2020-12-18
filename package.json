@@ -1,19 +1,12 @@
 {
   "name": "sonwan-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SonWan UI: a modular, cross-platform component library to build your next React & React Native Application.",
   "author": "Sonny Lazuardi Hermawan",
   "keywords": [
     "gatsby"
   ],
   "main": "./build/index.js",
-  "scripts": {
-  },
-  "license": "0BSD",
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    
-  }
+  "scripts": {},
+  "license": "0BSD"
 }
