@@ -27,13 +27,13 @@ const Swipe = (props: Swipe) => {
         dragMomentum={false}
         dragElastic={0}
         animate={controls}
-        onDrag={(e, info) => {
+        onDrag={(_, info) => {
           let value = info.offset.x + 44;
           if (value > 294) value = 294;
           if (value < 44) value = 44;
           controlBg.set({ width: value });
         }}
-        onDragEnd={(e, info) => {
+        onDragEnd={(_, info) => {
           if (info.offset.x > 240) {
             props.onSwipeFinish && props.onSwipeFinish();
           }
