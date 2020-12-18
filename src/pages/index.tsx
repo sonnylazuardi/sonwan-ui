@@ -26,12 +26,20 @@ const IndexPage = () => {
           <p>SonWan UI is a modular, cross-platform component library</p>
           <p>to build your next React & React Native Application.</p>
         </div>
-        <Link
-          to="docs"
-          className="px-8 py-4 bg-purple rounded-xl self-center text-sm font-semibold text-white mb-4"
-        >
-          Getting Started
-        </Link>
+        <div className="self-center flex flex-row space-x-4">
+          <Link
+            to="docs"
+            className="px-8 py-4 bg-purple rounded-xl text-sm font-semibold text-white mb-4"
+          >
+            Getting Started
+          </Link>
+          <a
+            href="https://github.com/sonnylazuardi/sonwan-ui"
+            className="px-8 py-4 bg-black rounded-xl text-sm font-semibold text-white mb-4"
+          >
+            Github
+          </a>
+        </div>
 
         <div className="grid grid-cols-2 gap-5 bg-light-100 dark:bg-dark-900 p-8 m-8 rounded-2xl">
           <div className="col-span-full sm:col-span-1">
