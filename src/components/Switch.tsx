@@ -3,7 +3,7 @@ import * as React from "react";
 // markup
 const Switch = (props) => {
   return (
-    <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+    <div className="relative inline-block w-10 mr-2 align-middle select-none">
       <input
         onChange={(e) => {
           props.onChange && props.onChange(e.target.checked);
@@ -11,7 +11,7 @@ const Switch = (props) => {
         type="checkbox"
         name={props.name}
         id={props.name}
-        className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-transparent-100 appearance-none cursor-pointer"
+        className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-2 border-transparent-100 appearance-none cursor-pointer transition-transform duration-200 ease-in"
       />
       <label
         htmlFor={props.name}
