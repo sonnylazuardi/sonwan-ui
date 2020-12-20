@@ -12,7 +12,9 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "build:js": "yarn webpack",
+    "build:css": "yarn postcss src/styles/global.css -o build/compiled.css && yarn uglifycss build/compiled.css --output build/style.min.css"
   },
   "license": "0BSD",
   "dependencies": {
@@ -39,6 +41,7 @@
     "postcss-cli": "^8.3.1",
     "ts-loader": "^8.0.12",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "uglifycss": "^0.0.29",
     "webpack-cli": "^4.2.0"
   }
 }

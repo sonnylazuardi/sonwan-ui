@@ -19,8 +19,8 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "noEmit": true
+    "jsx": "react",
+    "noEmit": false
   },
   "exclude": ["node_modules", "dist"]
 }
