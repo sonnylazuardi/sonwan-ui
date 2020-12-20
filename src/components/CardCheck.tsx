@@ -9,9 +9,9 @@ const CardCheck = (props) => {
     <div
       onClick={() => setChecked(!checked)}
       className={cn(
-        `flex flex-row bg-white dark:bg-dark-500 p-4 rounded-2xl text-sm tracking-wide mb-4 cursor-pointer items-center`,
+        `flex flex-row bg-white dark:bg-dark-500 p-4 rounded-2xl text-sm tracking-wide mb-4 cursor-pointer items-center border border-transparent`,
         {
-          "border border-blue": checked,
+          "border-blue": checked,
         }
       )}
     >
@@ -20,10 +20,10 @@ const CardCheck = (props) => {
       <div
         className={cn(
           {
-            "border-0 bg-blue": checked,
-            "bg-blueTransparent border border-blue": !checked,
+            "bg-blue border-transparent": checked,
+            "bg-blueTransparent border-blue": !checked,
           },
-          "w-8 h-8 rounded-full flex justify-center items-center"
+          "w-8 h-8 rounded-full flex justify-center items-center border"
         )}
       >
         {checked ? <Checklist /> : null}
