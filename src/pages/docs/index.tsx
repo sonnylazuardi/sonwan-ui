@@ -30,8 +30,8 @@ const DemoIndex = () => {
   return (
     <div className="bg-white dark:bg-dark-500">
       <div className="max-w-screen-lg container mx-auto">
-        <div className="flex">
-          <div className="w-60 relative">
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:w-60 w-full relative">
             <div className="sticky top-0 left-0 bottom-0 right-0 sm:h-screen flex flex-col text-black dark:text-white bg-white dark:bg-dark-500 overflow-auto">
               <Link
                 to="/"
