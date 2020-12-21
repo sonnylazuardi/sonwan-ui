@@ -33,17 +33,17 @@ const IndexPage = () => {
             to="docs"
             className="px-8 py-4 bg-purple rounded-xl text-sm font-semibold text-white mb-4"
           >
-            Getting Started
+            🚀 &nbsp; Get Started
           </Link>
           <a
             href="https://github.com/sonnylazuardi/sonwan-ui"
             className="px-8 py-4 bg-black rounded-xl text-sm font-semibold text-white mb-4"
           >
-            Github
+            🐱 &nbsp; Github
           </a>
         </div>
 
-        <div className="grid grid-cols-2 gap-5 bg-light-100 dark:bg-dark-900 p-8 m-8 rounded-2xl">
+        <div className="grid grid-cols-2 gap-5 bg-light-100 dark:bg-dark-900 p-4 m-4 rounded-2xl">
           <div className="col-span-full sm:col-span-1">
             <Card>
               <CardItem
@@ -148,10 +148,12 @@ const IndexPage = () => {
                 subtitle="**** - **** - 9876"
               />
             </CardCheck>
-            <Swipe
-              title="SWIPE TO PAY"
-              onSwipeFinish={() => alert("Swipe Triggered")}
-            />
+            <div style={{ width: 308 }} className="mx-auto">
+              <Swipe
+                title="SWIPE TO PAY"
+                onSwipeFinish={() => alert("Swipe Triggered")}
+              />
+            </div>
             <div className="py-4 text-sm opacity-50 w-full text-center">
               More Component Coming Soon...
             </div>

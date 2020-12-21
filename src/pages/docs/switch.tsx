@@ -23,7 +23,7 @@ const SwitchPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Switch" id="switch">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         The Switch component is used as an alternative for the Checkbox
         component. You can switch between enabled or disabled states.
       </div>

@@ -14,7 +14,7 @@ const InputPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Input" id="input">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         Input is a text input component with placeholder
       </div>
       <div className="grid grid-cols-2 gap-4">

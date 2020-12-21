@@ -26,7 +26,7 @@ const CardCheckPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Card Check" id="cardcheck">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         Card Check is a toggle component inside card with check mark on the
         right side of the card.
       </div>

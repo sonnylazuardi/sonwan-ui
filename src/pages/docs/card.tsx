@@ -41,7 +41,7 @@ const CardPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Card" id="card">
-      <div className="pb-10 max-w-4xl">
+      <div className="max-w-4xl mb-4">
         Card Component is a card wrapper component that automatically give you
         card layout and color. Inside card, you can add CardItem component that
         may contains avatar, title and subtitle.

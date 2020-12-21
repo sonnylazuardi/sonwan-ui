@@ -35,7 +35,7 @@ const IconsPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Icons" id="icons">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         Icons here are taken from{" "}
         <a
           href="https://ui8.net/piqodesign/products/iconly-essential-icons"

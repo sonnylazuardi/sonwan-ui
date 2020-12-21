@@ -14,7 +14,7 @@ const SwipePage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Swipe" id="swipe">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         Swipe is a sliding button component, to make sure user swipe the button
         from left to right
       </div>
@@ -34,7 +34,7 @@ const SwipePage = () => {
           </div>
         </div>
         <div className="col-span-full sm:col-span-1">
-          <div style={{ maxWidth: 308 }}>
+          <div style={{ width: 308 }}>
             <JsxParser
               bindings={{}}
               //@ts-ignore

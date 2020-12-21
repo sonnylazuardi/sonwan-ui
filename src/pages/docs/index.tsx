@@ -48,14 +48,11 @@ const DemoIndex = () => {
                     setActive(item.id);
                   }}
                   href={`#${item.id}`}
-                  className={cn(
-                    "p-4 m-4 mt-0 rounded-xl text-sm font-semibold",
-                    {
-                      "bg-white dark:bg-dark-500 text-black dark:text-white":
-                        item.id === active,
-                      "text-gray-500 dark:text-light-100": item.id !== active,
-                    }
-                  )}
+                  className={cn("p-4 mx-4 rounded-xl text-sm font-semibold", {
+                    "bg-white dark:bg-dark-500 text-black dark:text-white":
+                      item.id === active,
+                    "text-gray-500 dark:text-light-100": item.id !== active,
+                  })}
                 >
                   {item.label}
                 </a>

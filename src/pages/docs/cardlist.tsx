@@ -93,7 +93,7 @@ const CardListPage = () => {
   const [code, setCode] = React.useState(DEFAULT_CODE);
   return (
     <Content title="Card List" id="cardlist">
-      <div className="pb-10 max-w-4xl">
+      <div className="mb-4 max-w-4xl">
         You can add multiple CardItem inside Card, it will become stacked card
         list items. Each item can have avatar, title and subtitle.
       </div>
