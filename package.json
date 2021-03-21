@@ -23,11 +23,13 @@
     "framer-motion": "^3.0.0",
     "gatsby": "^2.26.1",
     "gatsby-plugin-postcss": "^3.3.0",
+    "gatsby-plugin-react-helmet": "^4.1.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "postcss": "^8.2.1",
     "prismjs": "^1.22.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-jsx-parser": "^1.28.1",
     "react-simple-code-editor": "^0.11.0",
     "tailwind-rn": "^2.0.1",
@@ -36,6 +38,7 @@
     "webpack": "^5.11.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.2.2",
     "postcss-cli": "^8.3.1",
