@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import Switch from "@/components/Switch";
 import Folder from "@/icons/Folder";
 import CardCheck from "@/components/CardCheck";
@@ -17,7 +18,9 @@ const IndexPage = () => {
       className="flex flex-col items-center bg-white dark:bg-dark-500 text-black dark:text-white pt-24 pb-12"
       style={{ minHeight: "100vh" }}
     >
-      <title>SonWan UI</title>
+      <Helmet>
+        <title>SonWan UI</title>
+      </Helmet>
       <div style={{ width: 768, maxWidth: "100%" }} className="flex flex-col">
         <div className="text-5xl font-extrabold text-center tracking-tighter mb-2">
           SonWan UI
